@@ -1,0 +1,115 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Heading */
+h1 {
+  color: #66fcf1;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Form */
+form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+form input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 30%;
+}
+
+form button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #45a29e;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #66fcf1;
+  color: #0b0c10;
+}
+
+/* Result Card */
+h2 {
+  margin-bottom: 15px;
+  color: #66fcf1;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.result-card p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+.result-card a {
+  color: #66fcf1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.result-card a:hover {
+  text-decoration: underline;
+}
+
+/* Progress Bar for Confidence Score */
+.progress {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  height: 12px;
+  width: 100%;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #45a29e, #66fcf1);
+  width: 0;
+  transition: width 1s ease;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

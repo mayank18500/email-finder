@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Finder with Tomba</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Tomba Email Finder</h1>
+  <form action="/find" method="get">
+    <input name="fname" placeholder="First Name" required>
+    <input name="lname" placeholder="Last Name" required>
+    <input name="domain" placeholder="Company Domain" required>
+    <button type="submit">Find Email</button>
+  </form>
+
+  <% if (data) { %>
+    <h2>Result</h2>
+    <p><strong>Email:</strong> <%= data.email %></p>
+    <p><strong>Verification Status:</strong> <%= data.verification_status %></p>
+    <p><strong>Confidence Score:</strong> <%= data.score %></p>
+    <% if (data.position) { %><p><strong>Job Title:</strong> <%= data.position %></p><% } %>
+    <% if (data.country) { %><p><strong>Country:</strong> <%= data.country %></p><% } %>
+    <% if (data.linkedin) { %>
+      <p><strong>LinkedIn:</strong> <a href="<%= data.linkedin %>" target="_blank">Profile</a></p>
+    <% } %>
+  <% } else if (error) { %>
+    <p><%= error %></p>
+  <% } %>
+</body>
+</html>
