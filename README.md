@@ -32,8 +32,8 @@ You will also need a Tomba API key and secret. These can be obtained by signing 
 The application uses environment variables for configuration. You must create a `.env` file in the root directory of the project with the following variables:
 
 ```sh
-TOMBA_KEY=ta_a827iqsbr2nguoazoh4oxqbejsv0l03tam1f6
-TOMBA_SECRET=ts_65cae75e-17d6-43e3-b6ed-ec83b385965b
+TOMBA_KEY=ta_a827i___________________l03tam1f6
+TOMBA_SECRET=ts_65____________________ec83b385965b
 PORT=3000
 TOMBA_URL=https://api.tomba.io/v1/email-finder
 ```
